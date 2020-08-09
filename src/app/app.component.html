@@ -1,10 +1,14 @@
-<h1>Proyecto MEAN</h1>
-<ul>
-  <li><a [routerLink]="['/']" [routerLinkActive]="['active']">Sobre mí</a></li>
-  <li><a [routerLink]="['/projects']" [routerLinkActive]="['active']">Proyectos</a></li>
-  <li><a [routerLink]="['/create']" [routerLinkActive]="['active']">Crear proyectos</a></li>
-  <li><a [routerLink]="['/contact']" [routerLinkActive]="['active']">Contacto</a></li>
-</ul>
-
-
+<header>
+  <ul>
+    <li><a [routerLink]="['/']" [routerLinkActive]="['active']">Sobre mí</a></li>
+    <li><a [routerLink]="['/projects']" [routerLinkActive]="['active']">Proyectos</a></li>
+    <li id="logo">RAUIBERT</li>
+    <li><a [routerLink]="['/create']" [routerLinkActive]="['active']">Crear proyectos</a></li>
+    <li><a [routerLink]="['/contact']" [routerLinkActive]="['active']">Contacto</a></li>
+  </ul>
+</header>
+<section id="content">
 <router-outlet></router-outlet>
+</section>
+
+<footer>Portofolio Rauibert</footer>
