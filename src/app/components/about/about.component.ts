@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  public tittle: string;
-  public subtittle: string;
+  public title: string;
+  public subtitle: string;
   public web: string;
 
   constructor() { 
-    this.tittle = "Rauibert";
-    this.subtittle = "Desarrollador web";
+    this.title = "Rauibert";
+    this.subtitle = "Desarrollador web";
     this.web = "rauibert.es";
    }
 
