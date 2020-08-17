@@ -4,15 +4,24 @@
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)" >
         <p>
             <label for="name">Nombre</label>
-            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name"/>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required/>
+            <span class="error" *ngIf="name.touched && !name.valid">
+                El nombre es obligatorio.
+            </span>
         </p>
         <p>
             <label for="description">Descripción</label>
-            <textarea name="description" #description="ngModel" [(ngModel)]="project.description"></textarea>
+            <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+            <span class="error" *ngIf="description.touched && !description.valid">
+                La descripción es obligatoria.
+            </span>
         </p>
         <p>
             <label for="category">Categoría</label>
-            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category"/>
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required />
+            <span class="error" *ngIf="category.touched && !category.valid">
+                La categoría es obligatoria.
+            </span>
         </p>
         <p>
             <label for="year">Año</label>
@@ -20,7 +29,10 @@
         </p>
         <p>
             <label for="langs">Lenguajes utilizados</label>
-            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs"/>
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required/>
+            <span class="error" *ngIf="langs.touched && !langs.valid">
+                Los lenguajes son obligatorios.
+            </span>
         </p>
         <p>
             <label for="image">Imagen del proyecto</label>
