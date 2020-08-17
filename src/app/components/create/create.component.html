@@ -38,7 +38,7 @@
             <label for="image">Imagen del proyecto</label>
             <input type="file" name="image" placeholder="Subir imagen"/>
         </p>
-        <input type="submit" value="Enviar" />
+        <input type="submit" value="Enviar" [disabled]="!projectForm.valid" />
     </form>
 
 </div>

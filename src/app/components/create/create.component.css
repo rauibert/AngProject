@@ -43,6 +43,11 @@ form button{
     border-radius: 4px;
 }
 
+form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 form input[type="file"]{
     width: 100%;
     display: block;
