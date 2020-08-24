@@ -4,6 +4,7 @@
 
     <ul>
         <li *ngFor="let project of projects">
+            <img src="{{url+'getImage/'+ project.image}}" *ngIf="project.image" />
             <h3>{{ project.name }}</h3>
             <p>{{ project.category }}</p>
             <p>{{ project.description }}</p>
