@@ -4,7 +4,7 @@
 
     <ul>
         <li *ngFor="let project of projects" class="project">
-            <a [routerLink]="['/project', project._id]">
+            <a [routerLink]="['/project', '/' + project._id]">
                 <div class="image">
                     <img src="{{url+'getImage/'+ project.image}}" *ngIf="project.image" />
                 </div>

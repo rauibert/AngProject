@@ -12,6 +12,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class DetailComponent implements OnInit {
   public url: string;
+  public project: Project;
 
   constructor(
     private _projectService : ProjectService,
@@ -29,7 +30,14 @@ export class DetailComponent implements OnInit {
   }
 
   getProject(id){
-
+    this._projectService.getProject(id).subscribe(
+      response => {
+        this.project = response.project;
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 
 }
