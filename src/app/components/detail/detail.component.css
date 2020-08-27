@@ -1,0 +1,38 @@
+.container img{
+    width: 100%;
+}
+
+.container .image{
+    float: left;
+    width: 49%;
+}
+
+.container .data{
+    float: right;
+    width: 49%;
+    margin: 2px;
+}
+
+.button-edit, .button-delete{
+    display: block;
+    font-size: 17px;
+    padding: 10px;
+    margin-top: 15px;    
+    border-radius: 4px;
+    text-decoration: none;
+    width: 40%;
+    float: left;
+    margin-right: 10px;
+}
+
+.blue{
+    color: white;
+    background: rgba(53,103, 164, 1);
+    border: 1px solid rgba(53,83, 189, 1);
+}
+
+.red{
+    color: white;
+    background: rgb(170, 63, 49);
+    border: 1px solid rgb(109, 25, 3);
+}
