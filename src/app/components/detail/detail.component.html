@@ -13,7 +13,7 @@
         <p>{{ project.langs }}</p>
         <p>
             <a href="#" class="button-edit blue">Editar</a>
-            <a href="#" class="button-delete red">Borrar</a>
+            <a (click)="deleteProject(project._id)" class="button-delete red">Borrar</a>
         </p>
     </div>
 
