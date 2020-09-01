@@ -15,6 +15,8 @@ export class CreateComponent implements OnInit {
   public project: Project;
   public status: string;
   public filesToUpload: Array<File>;
+  public url: string;
+  public saveProject;
 
   constructor(
     private _projectService: ProjectService,
@@ -22,6 +24,7 @@ export class CreateComponent implements OnInit {
   ) {
     this.title = "Crear nuevo proyecto";
     this.project = new Project('', '', '', '', 2020, '', '' );
+    this.url = Global.url;
    }
 
   ngOnInit(): void {
@@ -35,7 +38,7 @@ export class CreateComponent implements OnInit {
           //Subo la imagen
           this._uploadService.makeFileRequest(Global.url + 'uploadImage/' + response.project._id, [], this.filesToUpload, 'image' )
           .then((result:any) => {
-            console.log(result);
+            this.saveProject = result.project;
             this.status = 'success';
             form.reset();
           });
